@@ -31,6 +31,9 @@ import { RequestInterceptor } from '../config/interceptors/request.interceptor';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+import { SharedModule } from './shared/shared.module';
+import { DemoAutocompleteComponent } from './demo/demo-autocomplete/demo-autocomplete.component';
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
 ];
@@ -55,6 +58,8 @@ const httpInterceptorProviders: Type<any>[] = [
     DashboardTemplateComponent,
     EmailTemplateComponent,
     EditorTemplateComponent,
+
+    DemoAutocompleteComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     BrowserModule,
@@ -69,6 +74,8 @@ const httpInterceptorProviders: Type<any>[] = [
     CovalentMarkdownModule,
     appRoutes,
     NgxChartsModule,
+    
+    SharedModule
   ], // modules needed to run this module
   providers: [
     appRoutingProviders,

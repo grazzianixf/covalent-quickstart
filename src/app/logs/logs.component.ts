@@ -17,12 +17,16 @@ export class LogsComponent implements AfterViewInit {
   users: Object[];
   products: Object[];
 
+
+
   constructor(private _titleService: Title,
               private _itemsService: ItemsService,
               private _usersService: UsersService,
               private _productsService: ProductsService,
               private _loadingService: TdLoadingService,
               public media: TdMediaService) {
+
+
 
   }
 
@@ -68,5 +72,7 @@ export class LogsComponent implements AfterViewInit {
       });
     });
   }
+
+
 
 }
