@@ -1,13 +1,14 @@
-<div layout="row">
-  <md-input-container flex="50">
-    <input mdInput placeholder="State" [mdAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel"
-      (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
-  </md-input-container>
-</div>
 
-<md-autocomplete #tdAuto="mdAutocomplete">
-  <md-option *ngFor="let state of tdStates" [value]="state.name">
-    <span>{{ state.name }}</span>
-    <span class="demo-secondary-text"> ({{state.code}}) </span>
-  </md-option>
-</md-autocomplete>
+  <div layout="row">
+    <md-input-container flex="50">
+      <input mdInput placeholder="State" [mdAutocomplete]="tdAuto" [(ngModel)]="currentState" #modelDir="ngModel"
+        (ngModelChange)="this.tdStates = filterStates(currentState)" [disabled]="tdDisabled">
+    </md-input-container>
+  </div>
+
+  <md-autocomplete #tdAuto="mdAutocomplete">
+    <md-option *ngFor="let state of tdStates" [value]="state.name">
+      <span>{{ state.name }}</span>
+      <span class="demo-secondary-text"> ({{state.code}}) </span>
+    </md-option>
+  </md-autocomplete>

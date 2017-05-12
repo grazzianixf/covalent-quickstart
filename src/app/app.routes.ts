@@ -18,6 +18,8 @@ import { DashboardTemplateComponent } from './templates/dashboard/dashboard.comp
 import { EmailTemplateComponent } from './templates/email/email.component';
 import { EditorTemplateComponent } from './templates/editor/editor.component';
 
+import { DemoAutocompleteComponent } from './demo/demo-autocomplete/demo-autocomplete.component';
+
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: MainComponent, children: [{
@@ -49,6 +51,7 @@ const routes: Routes = [
       {path: 'email', component: EmailTemplateComponent},
       {path: 'editor', component: EditorTemplateComponent},
     ]},
+    {path: 'demo', component: DemoAutocompleteComponent},
   ]},
 ];
 

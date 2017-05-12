@@ -8,6 +8,9 @@ import { SharedModule } from './../shared/shared.module';
     CommonModule,
     SharedModule
   ],
+  exports: [
+    DemoAutocompleteComponent
+  ],
   declarations: [DemoAutocompleteComponent]
 })
 export class DemoModule { }
