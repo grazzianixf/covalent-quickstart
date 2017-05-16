@@ -28,6 +28,10 @@ export class MainComponent {
       title: 'Covalent Templates',
       route: '/templates',
       icon: 'view_module',
+    }, {
+      title: 'Demos',
+      route: '/demo',
+      icon: 'view_module',
     },
   ];
 

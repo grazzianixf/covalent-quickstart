@@ -1,1 +1,10 @@
-<app-autocomplete></app-autocomplete>
+<td-layout-nav-list #navList
+                    logo="assets:covalent"
+                    toolbarTitle="Logs"
+                    [opened]="media.registerQuery('gt-sm') | async"
+                    [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'push'"
+                    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '350px' : '100%'">
+    
+    <app-autocomplete></app-autocomplete>
+
+</td-layout-nav-list>

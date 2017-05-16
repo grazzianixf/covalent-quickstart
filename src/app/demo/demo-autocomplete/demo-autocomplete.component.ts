@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Title }     from '@angular/platform-browser';
+
+import { TdMediaService } from '@covalent/core';
 
 @Component({
   selector: 'app-demo-autocomplete',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoAutocompleteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _titleService: Title,
+              public media: TdMediaService) { }
 
   ngOnInit() {
   }
