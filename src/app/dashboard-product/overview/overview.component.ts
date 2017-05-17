@@ -3,13 +3,13 @@ import { Title }     from '@angular/platform-browser';
 import { single, multi, multi2 } from './data';
 import { TdLoadingService, TdDigitsPipe } from '@covalent/core';
 
-import { ItemsService, UsersService } from '../../../services';
+import { ItemsService } from '../../../services';
 
 @Component({
   selector: 'qs-product-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss'],
-  viewProviders: [ ItemsService, UsersService ],
+  viewProviders: [ ItemsService ],
 })
 export class ProductOverviewComponent implements AfterViewInit {
 
@@ -46,7 +46,6 @@ export class ProductOverviewComponent implements AfterViewInit {
 
   constructor(private _titleService: Title,
               private _itemsService: ItemsService,
-              private _usersService: UsersService,
               private _loadingService: TdLoadingService) {
                 // Chart Single
                 Object.assign(this, {single});
@@ -82,20 +81,6 @@ export class ProductOverviewComponent implements AfterViewInit {
         this.items = items;
         setTimeout(() => {
           this._loadingService.resolve('items.load');
-        }, 2000);
-      });
-    });
-    this._loadingService.register('users.load');
-    this._usersService.query().subscribe((users: Object[]) => {
-      this.users = users;
-      setTimeout(() => {
-        this._loadingService.resolve('users.load');
-      }, 2000);
-    }, (error: Error) => {
-      this._usersService.staticQuery().subscribe((users: Object[]) => {
-        this.users = users;
-        setTimeout(() => {
-          this._loadingService.resolve('users.load');
         }, 2000);
       });
     });
