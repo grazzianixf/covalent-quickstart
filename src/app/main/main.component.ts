@@ -17,18 +17,6 @@ export class MainComponent {
       route: '/product',
       icon: 'view_quilt',
     }, {
-      title: 'Product Logs',
-      route: '/logs',
-      icon: 'receipt',
-    }, {
-      title: 'Manage Users',
-      route: '/users',
-      icon: 'people',
-    }, {
-      title: 'Covalent Templates',
-      route: '/templates',
-      icon: 'view_module',
-    }, {
       title: 'Demos',
       route: '/demo',
       icon: 'view_module',

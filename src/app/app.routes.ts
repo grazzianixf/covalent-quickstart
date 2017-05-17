@@ -7,16 +7,10 @@ import { ProductOverviewComponent } from './dashboard-product/overview/overview.
 import { ProductStatsComponent } from './dashboard-product/stats/stats.component';
 import { ProductFeaturesComponent } from './dashboard-product/features/features.component';
 import { FeaturesFormComponent } from './dashboard-product/features/form/form.component';
-import { UsersComponent } from './users/users.component';
-import { UsersFormComponent } from './users/form/form.component';
-import { LogsComponent } from './logs/logs.component';
+
 import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
-import { TemplatesComponent } from './templates/templates.component';
-import { DashboardTemplateComponent } from './templates/dashboard/dashboard.component';
-import { EmailTemplateComponent } from './templates/email/email.component';
-import { EditorTemplateComponent } from './templates/editor/editor.component';
 
 import { DemoAutocompleteComponent } from './demo/demo-autocomplete/demo-autocomplete.component';
 
@@ -37,20 +31,7 @@ const routes: Routes = [
       ]},
     ]},
     {path: 'item/:id', component: DetailComponent},
-    {path: 'logs', component: LogsComponent},
     {path: 'form', component: FormComponent},
-    {path: 'users', children: [
-      {path: '', component: UsersComponent},
-      {path: 'add', component: UsersFormComponent},
-      {path: ':id/delete', component: UsersFormComponent},
-      {path: ':id/edit', component: UsersFormComponent},
-    ]},
-    {path: 'templates', children: [
-      {path: '', component: TemplatesComponent},
-      {path: 'dashboard', component: DashboardTemplateComponent},
-      {path: 'email', component: EmailTemplateComponent},
-      {path: 'editor', component: EditorTemplateComponent},
-    ]},
     {path: 'demo', component: DemoAutocompleteComponent},
   ]},
 ];
