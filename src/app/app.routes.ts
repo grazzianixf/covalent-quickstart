@@ -17,7 +17,7 @@ import { DemoAutocompleteComponent } from './demo/demo-autocomplete/demo-autocom
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', component: MainComponent, children: [{
-      component: DashboardComponent,
+      component: DashboardComponent, //Componente para mostrar na tela inicial
       path: '',
     },
     {path: 'product', component: DashboardProductComponent, children: [
