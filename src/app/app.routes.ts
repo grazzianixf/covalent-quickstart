@@ -12,7 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 
-import { DemoAutocompleteComponent } from './demo/demo-autocomplete/demo-autocomplete.component';
+import { DemosComponent } from './demos/demos.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,7 +32,7 @@ const routes: Routes = [
     ]},
     {path: 'item/:id', component: DetailComponent},
     {path: 'form', component: FormComponent},
-    {path: 'demo', component: DemoAutocompleteComponent},
+    {path: 'demos', component: DemosComponent},    
   ]},
 ];
 

@@ -18,7 +18,7 @@ export class MainComponent {
       icon: 'view_quilt',
     }, {
       title: 'Demos',
-      route: '/demo',
+      route: '/demos',
       icon: 'view_module',
     },
   ];
