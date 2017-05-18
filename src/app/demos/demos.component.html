@@ -18,9 +18,9 @@
         (click)="!media.query('gt-sm') && manageList.close()"
         [routerLinkActive]="['active']"
         [routerLinkActiveOptions]="{exact:true}"
-        [routerLink]="['/product']">
+        [routerLink]="['formCadastro']">
         <md-icon md-list-icon>dashboard</md-icon>
-        Dashboard
+        Form de Cadastro
       </a>
       <a md-list-item
         md-ripple class="block relative"
@@ -63,16 +63,7 @@
       <button md-icon-button><md-icon class="md-24">more_vert</md-icon></button>
     </div>
 
-  <!-- -->
-  <div class="md-content" class="inset">
-
-    <app-autocomplete></app-autocomplete>
-
-    <a md-fab color="accent" class="mat-fab-bottom-right fixed" [routerLink]="['/form']"> 
-        <md-icon>add</md-icon>
-    </a>      
-  </div>
-  <!-- -->
+    <router-outlet></router-outlet>
 
   </td-layout-manage-list>
 </td-layout-nav>

@@ -27,6 +27,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { SharedModule } from './shared/shared.module';
 
 import { DemosComponent } from './demos/demos.component';
+import { DemoFormCadastroComponent } from './demos/demo-form-cadastro/demo-form-cadastro.component';
  
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
@@ -46,7 +47,9 @@ const httpInterceptorProviders: Type<any>[] = [
     DetailComponent,
     LoginComponent,
 
-    DemosComponent
+    DemosComponent,
+
+    DemoFormCadastroComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     BrowserModule,

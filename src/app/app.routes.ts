@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 
 import { DemosComponent } from './demos/demos.component';
+import { DemoFormCadastroComponent } from './demos/demo-form-cadastro/demo-form-cadastro.component';
+
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,7 +34,10 @@ const routes: Routes = [
     ]},
     {path: 'item/:id', component: DetailComponent},
     {path: 'form', component: FormComponent},
-    {path: 'demos', component: DemosComponent},    
+    {path: 'demos', component: DemosComponent, children: [
+      //{path: '', component: DemosComponent},
+      {path: 'formCadastro', component: DemoFormCadastroComponent},      
+    ]},    
   ]},
 ];
 
